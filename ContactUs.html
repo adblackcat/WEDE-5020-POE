@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta name="description" content="Get in contact with the Cape Town Youth Empowerment Hub">
+    <meta name="keywords" content="contact, information, Cape Town">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - CTYEH</title>
@@ -33,23 +35,41 @@
         </section>
         <section>
             <h3>Contact Form</h3>
-            <form action="#" method="post">
+            
+            <form action="mailto:info@ctyeh.org" method="post" enctype="text/plain">
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required>
-
+            
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" required>
-
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="4" required></textarea>
-
+            
+                <label for="inquiry">Inquiry:</label>
+                <textarea id="inquiry" name="inquiry" rows="4" required></textarea>
+            
                 <input type="submit" value="Send Message">
             </form>
+            <script>
+                document.querySelector("form").addEventListener("submit", function(e) {
+                    const name = document.getElementById("name");
+                    if (name.value === "") {
+                        alert("Name is required");
+                        name.focus();
+                        e.preventDefault();  // Prevent form submission
+                    }
+                });
+            </script>
+            
+            
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2024 Cape Town Youth Empowerment Hub. All rights reserved.</p>
+        <p>&copy; <span id="currentYear"></span> Cape Town Youth Empowerment Hub. All rights reserved.</p>
     </footer>
+    
+    <script>
+        document.getElementById("currentYear").textContent = new Date().getFullYear();
+    </script>
+    
 </body>
 </html>

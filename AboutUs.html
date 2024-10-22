@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta name="description" content="Learn more about The Cape Town Youth Empowerment Hub.">
+    <meta name="keywords" content="mission, vision, story, team">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - CTYEH</title>
@@ -44,7 +46,12 @@
     </main>
 
     <footer>
-        <p>&copy; 2024 Cape Town Youth Empowerment Hub. All rights reserved.</p>
+        <p>&copy; <span id="currentYear"></span> Cape Town Youth Empowerment Hub. All rights reserved.</p>
     </footer>
+    
+    <script>
+        document.getElementById("currentYear").textContent = new Date().getFullYear();
+    </script>
+    
 </body>
 </html>

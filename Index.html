@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta name="description" content="Empowering Cape Town's youth with skills and opportunities for a brighter future.">
+    <meta name="keywords" content="youth, empowerment, Cape Town, skills, workshops">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cape Town Youth Empowerment Hub</title>
@@ -37,7 +39,13 @@
     </main>
 
     <footer>
-        <p>&copy; 2024 Cape Town Youth Empowerment Hub. All rights reserved.</p>
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe9tDpLu8_zj7zum9Yrl5CelYYcr9XwrE5p-yC2j8ueUC8FkQ/viewform?embedded=true" width="640" height="624" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+        <p>&copy; <span id="currentYear"></span> Cape Town Youth Empowerment Hub. All rights reserved.</p>
     </footer>
+    
+    <script>
+        document.getElementById("currentYear").textContent = new Date().getFullYear();
+    </script>
+    
 </body>
 </html>
